@@ -1,0 +1,8 @@
+{
+  "name": "Beginner SQL with MySQL",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/mysql:1": {}
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh"
+}
