@@ -1,5 +1,9 @@
 {
   "name": "Beginner SQL with MySQL",
-  "image": "mcr.microsoft.com/devcontainers/mysql:8.0",
-  "postCreateCommand": "mysql --version"
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "features": {
+    "ghcr.io/devcontainers/features/mysql:1": {
+      "mysqlVersion": "8.0"
+    }
+  }
 }
