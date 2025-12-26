@@ -1,5 +1,16 @@
 {
-  "name": "Beginner SQL with MySQL",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
-  "postCreateCommand": "bash .devcontainer/setup.sh"
+  "name": "SQL Beginner Workshop",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "mysql": "8.0"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["coderoad.coderoad"]
+    }
+  },
+  "postCreateCommand": "sudo service mysql start",
+  "containerEnv": {
+    "MYSQL_ROOT_PASSWORD": "root"
+  }
 }
