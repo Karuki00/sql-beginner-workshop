@@ -1,0 +1,12 @@
+{
+  "name": "SQL Beginner Workshop",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "coderoad.coderoad"
+      ]
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh"
+}
