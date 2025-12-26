@@ -11,4 +11,4 @@ echo "Starting MySQL service..."
 sudo service mysql start
 
 echo "MySQL version:"
-mysql --version
+sudo mysql --version
