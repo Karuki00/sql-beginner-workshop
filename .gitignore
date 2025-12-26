@@ -1,6 +1,3 @@
-# Ignore check scripts
-checks/
-
 # Ignore devcontainer temporary files
 .devcontainer/.vscode/
 .devcontainer/*.log
