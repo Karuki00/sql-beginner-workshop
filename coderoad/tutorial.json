@@ -1,292 +1,332 @@
 {
-  "name": "Workshop SQL Pemula (MySQL)",
-  "description": "Belajar SQL dengan repetisi. Ketik perintah, buat kesalahan, bangun kepercayaan diri.",
-  "lessons": [
-    {
-      "id": "step01",
-      "name": "Masuk MySQL",
-      "instructions": "Masuk ke shell MySQL.",
-      "checks": [
-        {
-          "type": "shell",
-          "command": "bash checks/check.sh step01",
-          "message": "Berhasil masuk MySQL"
-        }
+  "id": "Karuki00/sql-beginner-workshop:v1.0.0",
+  "version": "1.0.0",
+  "summary": {
+    "title": "Workshop SQL Pemula (MySQL)",
+    "description": "Belajar SQL dengan repetisi. Ketik perintah, buat kesalahan, bangun kepercayaan diri."
+  },
+  "config": {
+    "setup": {
+      "commands": [
+        "bash .devcontainer/setup.sh"
+      ],
+      "commits": []
+    },
+    "testRunner": {
+      "command": "bash",
+      "args": [
+        "checks/check.sh"
+      ],
+      "directory": "."
+    },
+    "continue": {
+      "commands": []
+    },
+    "reset": {
+      "commands": [
+        "bash .devcontainer/setup.sh"
       ]
     },
+    "dependencies": [
+      {
+        "name": "mysql",
+        "version": ">=8.0"
+      }
+    ]
+  },
+  "levels": [
     {
-      "id": "step02",
-      "name": "Tampilkan Database",
-      "instructions": "Tampilkan semua database.",
-      "checks": [
+      "id": "level1",
+      "title": "Level 1 - Dasar MySQL",
+      "summary": "Belajar perintah dasar MySQL seperti CREATE DATABASE, SHOW DATABASES, USE, CREATE TABLE, INSERT, SELECT, UPDATE, DELETE.",
+      "steps": [
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step02",
-          "message": "Database berhasil ditampilkan"
-        }
-      ]
-    },
-    {
-      "id": "step03",
-      "name": "Buat Database",
-      "instructions": "Buat database bernama `workshop`.",
-      "checks": [
+          "id": "step01",
+          "title": "Masuk MySQL",
+          "content": "Masuk ke shell MySQL.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step01",
+              "successMessage": "Berhasil masuk MySQL"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step03",
-          "message": "Database `workshop` berhasil dibuat"
-        }
-      ]
-    },
-    {
-      "id": "step04",
-      "name": "Tampilkan Database Lagi",
-      "instructions": "Tampilkan semua database lagi.",
-      "checks": [
+          "id": "step02",
+          "title": "Tampilkan Database",
+          "content": "Tampilkan semua database.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step02",
+              "successMessage": "Database berhasil ditampilkan"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step04",
-          "message": "Database berhasil ditampilkan"
-        }
-      ]
-    },
-    {
-      "id": "step05",
-      "name": "Gunakan Database",
-      "instructions": "Gunakan database `workshop`.",
-      "checks": [
+          "id": "step03",
+          "title": "Buat Database",
+          "content": "Buat database bernama `workshop`.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step03",
+              "successMessage": "Database `workshop` berhasil dibuat"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step05",
-          "message": "Database `workshop` berhasil dipilih"
-        }
-      ]
-    },
-    {
-      "id": "step06",
-      "name": "Buat Tabel users",
-      "instructions": "Buat tabel bernama `users`.",
-      "checks": [
+          "id": "step04",
+          "title": "Tampilkan Database Lagi",
+          "content": "Tampilkan semua database lagi.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step04",
+              "successMessage": "Database berhasil ditampilkan kembali"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step06",
-          "message": "Tabel `users` berhasil dibuat"
-        }
-      ]
-    },
-    {
-      "id": "step07",
-      "name": "Tampilkan Tabel",
-      "instructions": "Tampilkan semua tabel.",
-      "checks": [
+          "id": "step05",
+          "title": "Gunakan Database",
+          "content": "Gunakan database `workshop`.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step05",
+              "successMessage": "Database `workshop` berhasil dipilih"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step07",
-          "message": "Tabel berhasil ditampilkan"
-        }
-      ]
-    },
-    {
-      "id": "step08",
-      "name": "Buat Tabel products",
-      "instructions": "Buat tabel bernama `products`.",
-      "checks": [
+          "id": "step06",
+          "title": "Buat Tabel users",
+          "content": "Buat tabel bernama `users`.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step06",
+              "successMessage": "Tabel `users` berhasil dibuat"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step08",
-          "message": "Tabel `products` berhasil dibuat"
-        }
-      ]
-    },
-    {
-      "id": "step09",
-      "name": "Tampilkan Tabel Lagi",
-      "instructions": "Tampilkan tabel lagi.",
-      "checks": [
+          "id": "step07",
+          "title": "Tampilkan Tabel",
+          "content": "Tampilkan semua tabel.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step07",
+              "successMessage": "Tabel berhasil ditampilkan"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step09",
-          "message": "Tabel berhasil ditampilkan"
-        }
-      ]
-    },
-    {
-      "id": "step10",
-      "name": "Recreate Tabel users",
-      "instructions": "Hapus dan buat ulang tabel `users` dengan kolom.",
-      "checks": [
+          "id": "step08",
+          "title": "Buat Tabel products",
+          "content": "Buat tabel bernama `products`.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step08",
+              "successMessage": "Tabel `products` berhasil dibuat"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step10",
-          "message": "Tabel `users` berhasil dibuat ulang"
-        }
-      ]
-    },
-    {
-      "id": "step11",
-      "name": "Deskripsikan Tabel users",
-      "instructions": "Lihat struktur tabel `users`.",
-      "checks": [
+          "id": "step09",
+          "title": "Tampilkan Tabel Lagi",
+          "content": "Tampilkan tabel lagi.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step09",
+              "successMessage": "Tabel berhasil ditampilkan"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step11",
-          "message": "Struktur tabel `users` berhasil ditampilkan"
-        }
-      ]
-    },
-    {
-      "id": "step12",
-      "name": "Recreate Tabel products",
-      "instructions": "Hapus dan buat ulang tabel `products` dengan kolom.",
-      "checks": [
+          "id": "step10",
+          "title": "Recreate Tabel users",
+          "content": "Hapus dan buat ulang tabel `users` dengan kolom.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step10",
+              "successMessage": "Tabel `users` berhasil dibuat ulang"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step12",
-          "message": "Tabel `products` berhasil dibuat ulang"
-        }
-      ]
-    },
-    {
-      "id": "step13",
-      "name": "Deskripsikan Tabel products",
-      "instructions": "Lihat struktur tabel `products`.",
-      "checks": [
+          "id": "step11",
+          "title": "Deskripsikan Tabel users",
+          "content": "Lihat struktur tabel `users`.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step11",
+              "successMessage": "Struktur tabel `users` berhasil ditampilkan"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step13",
-          "message": "Struktur tabel `products` berhasil ditampilkan"
-        }
-      ]
-    },
-    {
-      "id": "step14",
-      "name": "Masukkan Data ke users",
-      "instructions": "Masukkan satu baris ke tabel `users`.",
-      "checks": [
+          "id": "step12",
+          "title": "Recreate Tabel products",
+          "content": "Hapus dan buat ulang tabel `products` dengan kolom.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step12",
+              "successMessage": "Tabel `products` berhasil dibuat ulang"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step14",
-          "message": "Data berhasil dimasukkan ke `users`"
-        }
-      ]
-    },
-    {
-      "id": "step15",
-      "name": "Lihat Data users",
-      "instructions": "Tampilkan semua baris dari `users`.",
-      "checks": [
+          "id": "step13",
+          "title": "Deskripsikan Tabel products",
+          "content": "Lihat struktur tabel `products`.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step13",
+              "successMessage": "Struktur tabel `products` berhasil ditampilkan"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step15",
-          "message": "Data `users` berhasil ditampilkan"
-        }
-      ]
-    },
-    {
-      "id": "step16",
-      "name": "Masukkan Data Lagi ke users",
-      "instructions": "Masukkan satu baris lagi ke tabel `users`.",
-      "checks": [
+          "id": "step14",
+          "title": "Masukkan Data ke users",
+          "content": "Masukkan satu baris ke tabel `users`.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step14",
+              "successMessage": "Data berhasil dimasukkan ke `users`"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step16",
-          "message": "Data tambahan berhasil dimasukkan ke `users`"
-        }
-      ]
-    },
-    {
-      "id": "step17",
-      "name": "Lihat Data users Lagi",
-      "instructions": "Tampilkan semua baris dari `users` lagi.",
-      "checks": [
+          "id": "step15",
+          "title": "Lihat Data users",
+          "content": "Tampilkan semua baris dari `users`.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step15",
+              "successMessage": "Data `users` berhasil ditampilkan"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step17",
-          "message": "Data `users` berhasil ditampilkan lagi"
-        }
-      ]
-    },
-    {
-      "id": "step18",
-      "name": "Masukkan Data ke products",
-      "instructions": "Masukkan beberapa baris ke tabel `products`.",
-      "checks": [
+          "id": "step16",
+          "title": "Masukkan Data Lagi ke users",
+          "content": "Masukkan satu baris lagi ke tabel `users`.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step16",
+              "successMessage": "Data tambahan berhasil dimasukkan ke `users`"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step18",
-          "message": "Data berhasil dimasukkan ke `products`"
-        }
-      ]
-    },
-    {
-      "id": "step19",
-      "name": "Lihat Data products",
-      "instructions": "Tampilkan semua baris dari `products`.",
-      "checks": [
+          "id": "step17",
+          "title": "Lihat Data users Lagi",
+          "content": "Tampilkan semua baris dari `users` lagi.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step17",
+              "successMessage": "Data `users` berhasil ditampilkan lagi"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step19",
-          "message": "Data `products` berhasil ditampilkan"
-        }
-      ]
-    },
-    {
-      "id": "step20",
-      "name": "Update Data users",
-      "instructions": "Ubah salah satu baris di tabel `users`.",
-      "checks": [
+          "id": "step18",
+          "title": "Masukkan Data ke products",
+          "content": "Masukkan beberapa baris ke tabel `products`.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step18",
+              "successMessage": "Data berhasil dimasukkan ke `products`"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step20",
-          "message": "Data `users` berhasil diperbarui"
-        }
-      ]
-    },
-    {
-      "id": "step21",
-      "name": "Lihat Data users",
-      "instructions": "Tampilkan data users lagi.",
-      "checks": [
+          "id": "step19",
+          "title": "Lihat Data products",
+          "content": "Tampilkan semua baris dari `products`.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step19",
+              "successMessage": "Data `products` berhasil ditampilkan"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step21",
-          "message": "Data `users` berhasil ditampilkan"
-        }
-      ]
-    },
-    {
-      "id": "step22",
-      "name": "Hapus Data users",
-      "instructions": "Hapus satu baris dari `users`.",
-      "checks": [
+          "id": "step20",
+          "title": "Update Data users",
+          "content": "Ubah salah satu baris di tabel `users`.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step20",
+              "successMessage": "Data `users` berhasil diperbarui"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step22",
-          "message": "Data `users` berhasil dihapus"
-        }
-      ]
-    },
-    {
-      "id": "step23",
-      "name": "Lihat Data users Lagi",
-      "instructions": "Tampilkan data users lagi.",
-      "checks": [
+          "id": "step21",
+          "title": "Lihat Data users",
+          "content": "Tampilkan data users lagi.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step21",
+              "successMessage": "Data `users` berhasil ditampilkan"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step23",
-          "message": "Data `users` berhasil ditampilkan lagi"
-        }
-      ]
-    },
-    {
-      "id": "step24",
-      "name": "Review Akhir",
-      "instructions": "Tampilkan database, tabel, dan data untuk terakhir kali.",
-      "checks": [
+          "id": "step22",
+          "title": "Hapus Data users",
+          "content": "Hapus satu baris dari `users`.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step22",
+              "successMessage": "Data `users` berhasil dihapus"
+            }
+          ]
+        },
         {
-          "type": "shell",
-          "command": "bash checks/check.sh step24",
-          "message": "Review selesai"
+          "id": "step23",
+          "title": "Lihat Data users Lagi",
+          "content": "Tampilkan data users lagi.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step23",
+              "successMessage": "Data `users` berhasil ditampilkan lagi"
+            }
+          ]
+        },
+        {
+          "id": "step24",
+          "title": "Review Akhir",
+          "content": "Tampilkan database, tabel, dan data untuk terakhir kali.",
+          "commands": [
+            {
+              "type": "shell",
+              "command": "bash checks/check.sh step24",
+              "successMessage": "Review selesai"
+            }
+          ]
         }
       ]
     }
