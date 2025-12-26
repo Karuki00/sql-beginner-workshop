@@ -1,0 +1,16 @@
+# Ignore CodeRoad tutorial JSON and check scripts
+coderoad/config.json
+checks/
+
+# Ignore devcontainer temporary files
+.devcontainer/.vscode/
+.devcontainer/*.log
+.devcontainer/devcontainer.json
+.devcontainer/setup.sh
+
+# Ignore system files
+*.DS_Store
+*.swp
+
+# Ignore README
+README.md
